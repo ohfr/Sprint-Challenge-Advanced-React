@@ -51,8 +51,8 @@ const Display = (props) => {
             {props.data.map((cur, i) => {
                 return (
                     <div key={i} className={classes.card}>
-                        <h2>{cur.name}</h2>
-                        <p>{cur.country}</p>
+                        <h2 role="name">{cur.name}</h2>
+                        <p role="country">{cur.country}</p>
                         <p>{cur.searches}</p>
                     </div>
                 )

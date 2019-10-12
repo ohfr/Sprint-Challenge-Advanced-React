@@ -4,9 +4,11 @@ import * as rtl from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { render, fireEvent, waitForElement } from '@testing-library/react';
 import axiosMock from 'axios';
+import { useLocalStorage } from './Hooks/useLocalStorage';
+import { useDarkMode } from './Hooks/useDarkMode';
+import Display from './Components/Display';
 
 afterEach(rtl.cleanup);
-
 
 test('Renders Display Component', () => {
   const wrapper = rtl.render(<App />);
@@ -31,4 +33,12 @@ test('Render Dark Mode Switch', () => {
 //   const greetingNode  = await waitForElement(() => {
     
 //   })
+// })
+
+//OK i give up
+
+// test('Display Component uses correct data', () => {
+//   const wrapper = rtl.render(<Display data={[{name: 'Dan', country: 'USA', searches: 1}]}/>)
+//   const element = wrapper.getAllByRole(/country/i)
+//   expect(element).toHaveTextContent('USA')
 // })
